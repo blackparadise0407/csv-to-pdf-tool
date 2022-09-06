@@ -1,0 +1,47 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: "Lora", serif;
+  }
+
+  .col {
+    width: 33%;
+  }
+
+  h1 {
+    color: #4ad4eb;
+  }
+
+  .link {
+    display: block;
+    padding: 10px;
+    color: white;
+    background: #4ad4eb;
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+</style>
+<div class="container">
+  {{#each items}}
+  <div class="col">
+    <h1>{{name}}</h1>
+    <a class="link" href="{{postUrl}}">{{postUrl}}</a>
+    <img src="data:image/png;base64, {{base64Src}}" alt="" />
+  </div>
+  {{/each}}
+</div>
